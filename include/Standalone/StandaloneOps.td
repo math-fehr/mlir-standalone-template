@@ -10,6 +10,7 @@
 #define STANDALONE_OPS
 
 include "StandaloneDialect.td"
+include "StandaloneTypes.td"
 include "mlir/Interfaces/InferTypeOpInterface.td"
 include "mlir/Interfaces/SideEffectInterfaces.td"
 
@@ -35,9 +36,8 @@ def Standalone_FooOp : Standalone_Op<"foo", [Pure,
     let arguments = (ins I32:$input);
     let results = (outs I32:$res);
 
-    let assemblyFormat = [{
-        $input attr-dict `:` type($input)
-    }];
+    let assemblyFormat = [{ $input attr-dict `:` type($input) }];
 }
+
 
 #endif // STANDALONE_OPS

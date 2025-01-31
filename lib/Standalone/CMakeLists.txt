@@ -1,4 +1,5 @@
 add_mlir_dialect_library(MLIRStandalone
+        StandaloneTypes.cpp
         StandaloneDialect.cpp
         StandaloneOps.cpp
 
@@ -8,7 +9,7 @@ add_mlir_dialect_library(MLIRStandalone
         DEPENDS
         MLIRStandaloneOpsIncGen
 
-	LINK_LIBS PUBLIC
-	MLIRIR
+        LINK_LIBS PUBLIC
+        MLIRIR
         MLIRInferTypeOpInterface
-	)
+        )
